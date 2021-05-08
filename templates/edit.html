@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg')}} ')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Admin Panel</h1>
+          <span class="subheading">Add your post and manage them</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <a href="/dashboards"><button class="btn btn-primary">Dashboard Home</button></a>
+        <a href="/logout"><button class="btn btn-primary">Log Out</button></a>
+        <hr>
+        
+      <h1>Add/Edit Post </h1>
+
+
+
+      <form name="sentMessage" id="contactForm" method="post" action="/edit/{{post.sno}}">
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Title</label>
+            <input type="text" class="form-control" placeholder="Title" id="title" name="title" value="{{post.title}}" required
+              data-validation-required-message="Please enter your title.">
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Sub Title</label>
+              <input type="text" class="form-control" placeholder="subtitle" id="subtitle" name="subtitle" value="{{post.subtitle}}" required
+                data-validation-required-message="Please enter your subtitle.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Content</label>
+              <input type="text" class="form-control" placeholder="content" id="content" name="content" value="{{post.content}}" required
+                data-validation-required-message="Please enter your content.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Slug</label>
+              <input type="text" class="form-control" placeholder="slug" id="slug" name="slug" value="{{post.slug}}" required
+                data-validation-required-message="Please enter your slug.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Image</label>
+              <input type="text" class="form-control" placeholder="img_name" id="img_name" name="img_name" value="{{post.img_name}}" required
+                data-validation-required-message="Please enter your img_name.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Posted by</label>
+              <input type="text" class="form-control" placeholder="posted_by" id="posted_by" name="posted_by" value="{{post.posted_by}}" required
+                data-validation-required-message="Please enter your posted_by.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+       <br>
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+      </form>
+
+
+
+
+
+      <!-- Pager -->
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}
