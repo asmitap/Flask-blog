@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/thecoder",
+    "prod_uri": "mysql://root:@localhost/thecoder",
+    "fb_url": "https://facebook.com",
+    "tw_url": "https://twitter.com",
+    "gt_url": "https://github.com",
+    "blog_name" : "The Coding",
+    "tag_line" : "A Blog loved by Programmers",
+    "gmail_user" : "",
+    "gmail_password" : "",
+    "about_text" : "Hi! my name is Asmita Pokharel. I have a clear, logical mind with a practical approach to problem-solving and a drive to see things through to completion. I have more than 2 years of experience in managing and leading teams across multiple sectors. I am eager to learn, I enjoy overcoming challenges, and I have a genuine interest in Business Management and making organisations successful.",
+    "no_of_posts": 3,
+    "login_image" : "login.svg",
+    "login_email": "admin@gmail.com",
+    "login_password" : "admin123",
+    "upload_location" : "C:\\Users\\acer\\Desktop\\pythonProject\\static\\img"
+
+  }
+}
